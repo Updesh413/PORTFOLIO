@@ -7,7 +7,7 @@
       name="description"
       content="Professional Portfolio Website showcasing projects, certifications, and skills."
     />
-    <title>Portfolio</title>
+    <title>Updesh — Portfolio</title>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -33,12 +33,13 @@
         <a href="#" class="logo">Updesh.</a>
         <ul class="nav-links">
           <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#certifications">Certifications</a></li>
           <li><a href="#contact">Contact</a></li>
           <li>
             <a
-              href="https://drive.google.com/file/d/10w3MBcatFO9e2Y1yylhaWwzZeUU1i1tX/view?usp=sharing"
+              href="https://drive.google.com/file/d/1NrbDQYpjimxphQuzT8bUG9MCyXItlPfG/view?usp=sharing"
               class="btn-primary small"
               >Resume <i class="fas fa-download"></i
             ></a>
@@ -55,8 +56,14 @@
     <main>
       <!-- Hero Section -->
       <section id="about" class="hero">
+        <canvas
+          id="hero-canvas"
+          class="hero-canvas"
+          aria-hidden="true"
+        ></canvas>
+        <div class="hero-noise" aria-hidden="true"></div>
         <div class="container hero-container">
-          <div class="hero-content">
+          <div class="hero-content" data-reveal>
             <span class="greeting">Hello, I'm Updesh</span>
             <h1 class="name">
               Software <span class="gradient-text">Developer</span>
@@ -70,12 +77,13 @@
               <a href="#contact" class="btn-secondary">Contact Me</a>
             </div>
           </div>
-          <div class="hero-visual">
+          <div class="hero-visual" data-reveal data-reveal-delay="120">
             <!-- Decorative blurred blob behind the profile photo -->
             <div class="blob"></div>
+            <div class="profile-ring" aria-hidden="true"></div>
             <!-- Profile photo: put your photo at `assets/profile.jpg` -->
             <img
-              src="assets/photo.jpg"
+              src="assets/Updesh photo.jpeg"
               alt="Updesh"
               class="profile-photo"
               onerror="
@@ -90,68 +98,108 @@
       <!-- Skills Section -->
       <section id="skills" class="section">
         <div class="container">
-          <h2 class="section-title">
+          <h2 class="section-title" data-reveal>
             Technical <span class="gradient-text">Skills</span>
           </h2>
-          <div class="skills-grid">
+          <div class="skills-grid reveal-stagger">
             <!-- Skill 1 -->
-            <div class="skill-card">
-              <i class="fab fa-android skill-icon"></i>
-              <p class="skill-name">Flutter</p>
-            </div>
-            <!-- Skill 2 -->
-            <div class="skill-card">
-              <i class="fas fa-code skill-icon"></i>
-              <p class="skill-name">Dart</p>
-            </div>
-            <!-- Skill 3 -->
-            <div class="skill-card">
+            <div class="skill-card tilt-3d" data-tilt>
               <i class="fab fa-java skill-icon"></i>
               <p class="skill-name">Java</p>
             </div>
+            <!-- Skill 2 -->
+            <div class="skill-card tilt-3d" data-tilt>
+              <i class="fas fa-leaf skill-icon"></i>
+              <p class="skill-name">Spring Boot</p>
+            </div>
+            <!-- Skill 3 -->
+            <div class="skill-card tilt-3d" data-tilt>
+              <i class="fab fa-node-js skill-icon"></i>
+              <p class="skill-name">Node.js</p>
+            </div>
             <!-- Skill 4 -->
-            <div class="skill-card">
-              <i class="fab fa-aws skill-icon"></i>
-              <p class="skill-name">AWS</p>
+            <div class="skill-card tilt-3d" data-tilt>
+              <i class="fab fa-react skill-icon"></i>
+              <p class="skill-name">Next.js / React</p>
             </div>
             <!-- Skill 5 -->
-            <div class="skill-card">
-              <i class="fas fa-database skill-icon"></i>
-              <p class="skill-name">MongoDB</p>
+            <div class="skill-card tilt-3d" data-tilt>
+              <i class="fab fa-python skill-icon"></i>
+              <p class="skill-name">Python</p>
             </div>
             <!-- Skill 6 -->
-            <div class="skill-card">
-              <i class="fab fa-git-alt skill-icon"></i>
-              <p class="skill-name">Git</p>
+            <div class="skill-card tilt-3d" data-tilt>
+              <i class="fas fa-code skill-icon"></i>
+              <p class="skill-name">TypeScript</p>
             </div>
-            <div class="skill-card">
-              <i class="fab fa-github skill-icon"></i>
-              <p class="skill-name">GitHub</p>
+            <div class="skill-card tilt-3d" data-tilt>
+              <i class="fas fa-database skill-icon"></i>
+              <p class="skill-name">PostgreSQL</p>
             </div>
             <!-- Skill 8 -->
-            <div class="skill-card">
+            <div class="skill-card tilt-3d" data-tilt>
+              <i class="fas fa-server skill-icon"></i>
+              <p class="skill-name">MongoDB</p>
+            </div>
+            <!-- Skill 9 -->
+            <div class="skill-card tilt-3d" data-tilt>
+              <i class="fab fa-docker skill-icon"></i>
+              <p class="skill-name">Docker</p>
+            </div>
+            <!-- Skill 10 -->
+            <div class="skill-card tilt-3d" data-tilt>
+              <i class="fab fa-aws skill-icon"></i>
+              <p class="skill-name">AWS (EC2/S3)</p>
+            </div>
+            <!-- Skill 11 -->
+            <div class="skill-card tilt-3d" data-tilt>
+              <i class="fas fa-robot skill-icon"></i>
+              <p class="skill-name">Agentic AI / n8n</p>
+            </div>
+            <!-- Skill 12 -->
+            <div class="skill-card tilt-3d" data-tilt>
+              <i class="fab fa-git-alt skill-icon"></i>
+              <p class="skill-name">Git & Testing</p>
+            </div>
+            <!-- Skill 13 -->
+            <div class="skill-card tilt-3d" data-tilt>
+              <i class="fab fa-android skill-icon"></i>
+              <p class="skill-name">Flutter</p>
+            </div>
+            <!-- Skill 14 -->
+            <div class="skill-card tilt-3d" data-tilt>
+              <i class="fas fa-mobile-alt skill-icon"></i>
+              <p class="skill-name">Dart</p>
+            </div>
+            <!-- Skill 15 -->
+            <div class="skill-card tilt-3d" data-tilt>
               <i class="fas fa-fire skill-icon"></i>
               <p class="skill-name">Firebase</p>
             </div>
-            <!-- Skill 9 -->
-            <div class="skill-card">
+            <!-- Skill 16 -->
+            <div class="skill-card tilt-3d" data-tilt>
               <i class="fab fa-html5 skill-icon"></i>
               <p class="skill-name">HTML</p>
             </div>
-            <!-- Skill 10 -->
-            <div class="skill-card">
+            <!-- Skill 17 -->
+            <div class="skill-card tilt-3d" data-tilt>
               <i class="fab fa-css3-alt skill-icon"></i>
               <p class="skill-name">CSS</p>
             </div>
-            <!-- Skill 11 -->
-            <div class="skill-card">
+            <!-- Skill 18 -->
+            <div class="skill-card tilt-3d" data-tilt>
               <i class="fab fa-js skill-icon"></i>
               <p class="skill-name">JavaScript</p>
             </div>
-            <!-- Skill 12 -->
-            <div class="skill-card">
-              <i class="fab fa-react skill-icon"></i>
-              <p class="skill-name">React</p>
+            <!-- Skill 19 -->
+            <div class="skill-card tilt-3d" data-tilt>
+              <i class="fab fa-github skill-icon"></i>
+              <p class="skill-name">GitHub</p>
+            </div>
+            <!-- Skill 20 -->
+            <div class="skill-card tilt-3d" data-tilt>
+              <i class="fas fa-table skill-icon"></i>
+              <p class="skill-name">SQL & REST APIs</p>
             </div>
           </div>
         </div>
@@ -160,25 +208,60 @@
       <!-- Projects Section -->
       <section id="projects" class="section">
         <div class="container">
-          <h2 class="section-title">
+          <h2 class="section-title" data-reveal>
             Featured <span class="gradient-text">Projects</span>
           </h2>
-          <div class="projects-grid">
+          <div class="projects-grid reveal-stagger">
             <!-- Project 1 -->
-            <article class="project-card">
+            <article class="project-card tilt-3d" data-tilt>
+              <div class="project-image">
+                <i class="fas fa-headset"></i>
+              </div>
+              <div class="project-content">
+                <h3 class="project-title">Agentic Support System</h3>
+                <p class="project-desc">
+                  Built an autonomous AI support platform with Spring Boot
+                  microservices and a Next.js 15 frontend, enabling real-time
+                  ticket handling with secure authentication and workflow
+                  automation.
+                </p>
+                <div class="project-tags">
+                  <span class="tag">Spring Boot</span>
+                  <span class="tag">Next.js 15</span>
+                  <span class="tag">LangChain4j</span>
+                  <span class="tag">n8n</span>
+                </div>
+                <div class="project-links">
+                  <a
+                    href="https://github.com/Updesh413/AgenticSupportSystem"
+                    class="project-link"
+                    ><i class="fab fa-github"></i> Code</a
+                  >
+                  <a
+                    href="https://agentic-support-system-inky.vercel.app/"
+                    class="project-link"
+                    ><i class="fas fa-external-link-alt"></i> Live Demo</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <!-- Project 2 -->
+            <article class="project-card tilt-3d" data-tilt>
               <div class="project-image">
                 <i class="fas fa-mobile-alt"></i>
               </div>
               <div class="project-content">
                 <h3 class="project-title">AI Wallpaper</h3>
                 <p class="project-desc">
-                  Flutter app that provides HD wallpapers from Pexels API and
-                  generates AI-based wallpapers.
+                  Launched a high-performance Flutter app integrating Pexels API
+                  and Firebase with biometric authentication, optimized polling,
+                  and clean architecture for a stable user experience.
                 </p>
                 <div class="project-tags">
                   <span class="tag">Flutter</span>
-                  <span class="tag">Dart</span>
                   <span class="tag">Firebase</span>
+                  <span class="tag">Pexels API</span>
                 </div>
                 <div class="project-links">
                   <a
@@ -195,8 +278,8 @@
               </div>
             </article>
 
-            <!-- Project 2 -->
-            <article class="project-card">
+            <!-- Project 3 -->
+            <article class="project-card tilt-3d" data-tilt>
               <div class="project-image">
                 <i class="fa-solid fa-laptop-code"></i>
               </div>
@@ -204,12 +287,13 @@
                 <h3 class="project-title">Text Utils</h3>
                 <p class="project-desc">
                   Developed a text manipulation utility for case conversion,
-                  text cleaning, formatting and toggle between Dark/Light UI
-                  themes dynamically.
+                  text cleaning, formatting, and dynamic dark/light theme
+                  switching for better usability.
                 </p>
                 <div class="project-tags">
                   <span class="tag">React.js</span>
                   <span class="tag">Bootstrap</span>
+                  <span class="tag">JavaScript</span>
                 </div>
                 <div class="project-links">
                   <a
@@ -225,33 +309,6 @@
                 </div>
               </div>
             </article>
-
-            <!-- Project 3 -->
-            <article class="project-card">
-              <div class="project-image">
-                <i class="fa-solid fa-laptop-code"></i>
-              </div>
-              <div class="project-content">
-                <h3 class="project-title">News Monkey</h3>
-                <p class="project-desc">
-                  Built a dynamic news aggregator that fetches real-time global
-                  news articles using the News API along with category-based
-                  filtering and pagination features.
-                </p>
-                <div class="project-tags">
-                  <span class="tag">React.js</span>
-                  <span class="tag">Bootstrap</span>
-                  <span class="tag">News API</span>
-                </div>
-                <div class="project-links">
-                  <a
-                    href="https://github.com/Updesh413/News-Monkey"
-                    class="project-link"
-                    ><i class="fab fa-github"></i> Code</a
-                  >
-                </div>
-              </div>
-            </article>
           </div>
         </div>
       </section>
@@ -259,25 +316,31 @@
       <!-- Certifications Section -->
       <section id="certifications" class="section">
         <div class="container">
-          <h2 class="section-title">
+          <h2 class="section-title" data-reveal>
             My <span class="gradient-text">Certifications</span>
           </h2>
-          <div class="certifications-list">
-            <div class="cert-card">
-              <div class="cert-icon"></div>
+          <div class="certifications-list reveal-stagger">
+            <div class="cert-card tilt-3d" data-tilt>
+              <div class="cert-icon">
+                <i class="fas fa-award" aria-hidden="true"></i>
+              </div>
               <h3 class="cert-title">
                 Oracle Cloud Infrastructure 2025 Certified AI Foundations
                 Associate
               </h3>
               <p class="cert-issuer">Oracle</p>
             </div>
-            <div class="cert-card">
-              <div class="cert-icon"></div>
+            <div class="cert-card tilt-3d" data-tilt>
+              <div class="cert-icon">
+                <i class="fas fa-award" aria-hidden="true"></i>
+              </div>
               <h3 class="cert-title">Fundamentals of Deep Learning</h3>
               <p class="cert-issuer">NVIDIA</p>
             </div>
-            <div class="cert-card">
-              <div class="cert-icon"></div>
+            <div class="cert-card tilt-3d" data-tilt>
+              <div class="cert-icon">
+                <i class="fas fa-award" aria-hidden="true"></i>
+              </div>
               <h3 class="cert-title">Introducing Generative AI with AWS</h3>
               <p class="cert-issuer">Udacity</p>
             </div>
@@ -288,10 +351,10 @@
       <!-- Contact Section -->
       <section id="contact" class="section">
         <div class="container">
-          <h2 class="section-title">
+          <h2 class="section-title" data-reveal>
             Get In <span class="gradient-text">Touch</span>
           </h2>
-          <div class="contact-content">
+          <div class="contact-content" data-reveal data-reveal-delay="80">
             <p class="contact-text">
               I'm currently open to new opportunities and collaborations.
               Whether you have a question or just want to say hi, I'll try my
@@ -307,7 +370,7 @@
 
     <footer class="footer">
       <div class="container">
-        <p>&copy; 2025 Portfolio. All rights reserved.</p>
+        <p>&copy; 2026 Portfolio. All rights reserved.</p>
         <div class="social-links">
           <a href="https://github.com/Updesh413"
             ><i class="fab fa-github"></i
@@ -319,6 +382,6 @@
       </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script type="module" src="script.js"></script>
   </body>
 </html>
