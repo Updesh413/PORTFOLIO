@@ -1,36 +1,79 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Updesh | Software Developer & Architect Portfolio
 
-## Getting Started
+A high-fidelity, retro-futuristic Cyberpunk Command Line Interface (CLI) dashboard and portfolio redesign. 
 
-First, run the development server:
+Live Url: **[https://theupdesh-portfolio.netlify.app/](https://theupdesh-portfolio.netlify.app/)**
 
+---
+
+## 🚀 Core Features
+
+- **Interactive 3D WebGL Scene (Three.js)**: Renders a dual-layered, glowing wireframe mesh (a central green Torus-Knot core and an outer cyan Sphere shell) surrounded by floating digital particles. The entire 3D camera and geometry dynamically tilt and rotate in response to mouse movement.
+- **Retro CRT Boot Animation (Framer Motion)**: Features a line-by-line CLI terminal initialization process that transition-glitches (skew, hue rotate, and scale) into the primary page content when completed.
+- **Brutalist / Cyberpunk Aesthetics**: Styled with a strict 8px spacing grid, horizontal CRT scanlines, a dot-matrix overlay background, and monospaced typography (JetBrains Mono).
+- **Interactive Component Elements**: Buttons feature terminal-style blinking caret cursors, cards dynamically highlight with neon outlines on hover, and sections use baseline divisions.
+- **Secure Email Form System**: A functional contact form that simulates a secure packet transmission log inside an inline terminal container, sending message payloads to your email via the client-side Web3Forms API.
+- **Fast Static Export**: Pre-compiled static HTML export (`output: "export"`) ready for instant CDN distribution.
+
+---
+
+## 🛠️ Technology Stack
+
+- **Core**: Next.js 16 (App Router), React 19, TypeScript, PostCSS
+- **Styling**: Tailwind CSS v4, Custom CRT CSS Filters
+- **3D Visuals**: Three.js, React Three Fiber (`@react-three/fiber`), Drei (`@react-three/drei`)
+- **Animation System**: Framer Motion
+- **Upstream Router**: Web3Forms API
+- **Target Host**: Netlify
+
+---
+
+## 💻 Local Setup & Development
+
+### 1. Installation
+Clone the repository and install dependencies using the legacy peer deps flag (required for React 19 R3F compatibility):
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install --legacy-peer-deps
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. Environment Configuration
+Create a `.env.local` file in the project root:
+```env
+# Register your email at https://web3forms.com/ to get your free key
+NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY=your-access-key-here
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 3. Spin Development Server
+Run the local Next.js development server:
+```bash
+npm run dev
+```
+Open **[http://localhost:3000](http://localhost:3000)** in your browser to view the application.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 4. Build Production Build
+To test the compiler and compile the static build pages into the `/out` directory:
+```bash
+npm run build
+```
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 🌐 Netlify Deployment
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+This project includes a `netlify.toml` file at the root which configures deployment automatically.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Automated Setup
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. **Commit and Push**:
+   Push the latest changes to your GitHub branch:
+   ```bash
+   git add -A
+   git commit -m "Redesign portfolio documentation"
+   git push origin main
+   ```
+2. **Set Netlify Environment Variables**:
+   In your Netlify Dashboard, navigate to **Site configuration > Environment variables**, click **Add a variable**, and enter:
+   - **Key**: `NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY`
+   - **Value**: `your-access-key-from-web3forms`
+3. **Trigger Deploy**:
+   Under the **Deploys** tab, select **Trigger deploy > Deploy site**. Netlify will build the Next.js static files and serve them directly.
