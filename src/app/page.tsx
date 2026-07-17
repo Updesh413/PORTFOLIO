@@ -229,7 +229,7 @@ export default function Home() {
                   CONNECT
                 </a>
                 <a
-                  href="https://drive.google.com/file/d/1h4wIejh4parOWzwVM9LwU7bQO6LsVWlX/view?usp=sharing"
+                  href="https://drive.google.com/file/d/1_WupTLP96QUYh3e7znV4e1HCxABlkzLj/view?usp=sharing"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="ml-4 bg-[#00ff41] text-black px-5 py-2 font-bold hover:bg-[#00ff41]/80 transition-all btn-glitch flex items-center gap-1.5"
@@ -296,7 +296,7 @@ export default function Home() {
                     &gt; CONNECT
                   </a>
                   <a
-                    href="https://drive.google.com/file/d/1NrbDQYpjimxphQuzT8bUG9MCyXItlPfG/view?usp=sharing"
+                    href="https://drive.google.com/file/d/1_WupTLP96QUYh3e7znV4e1HCxABlkzLj/view?usp=sharing"
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={() => setMobileMenuOpen(false)}
@@ -853,7 +853,7 @@ export default function Home() {
                   <div className="h-[1px] flex-grow bg-[#00ff41]/20"></div>
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                   {/* Cert 1: Oracle */}
                   <motion.div
                     whileHover={{ scale: 1.02 }}
@@ -935,7 +935,47 @@ export default function Home() {
                     </div>
                   </motion.div>
 
-                  {/* Cert 3: NVIDIA */}
+                  {/* Cert 3: Microsoft */}
+                  <motion.div
+                    whileHover={{ scale: 1.02 }}
+                    className="bg-[#131313] border border-[#00ff41]/20 p-6 hover:border-[#00ff41] transition-all duration-300 flex flex-col justify-between group shadow-lg"
+                  >
+                    <div className="space-y-4">
+                      <div className="flex justify-between items-start">
+                        {/* Company Logo: Microsoft */}
+                        <img
+                          src="/assets/microsoft.png"
+                          alt="Microsoft Logo"
+                          className="w-12 h-12 object-contain filter brightness-100 drop-shadow-[0_0_8px_rgba(0,120,215,0.3)]"
+                        />
+                        <span className="text-[9px] px-2 py-0.5 bg-black text-[#00ff41] border border-[#00ff41]/35 font-bold uppercase tracking-wider">
+                          VERIFIED_0xDF
+                        </span>
+                      </div>
+
+                      <div>
+                        <h3 className="text-sm md:text-base font-bold text-white group-hover:text-[#00ff41] transition-colors leading-snug">
+                          Microsoft Certified: Azure AI Fundamentals
+                        </h3>
+                        <p className="text-xs text-[#e5e2e1]/50 font-bold uppercase mt-1">
+                          Microsoft
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="pt-6">
+                      <a
+                        href="https://learn.microsoft.com/api/credentials/share/en-us/Updesh/DFE8346AA8225504?sharingId"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-xs text-[#00f1fd] group-hover:text-[#00ff41] transition-colors font-bold uppercase flex items-center gap-1.5"
+                      >
+                        VIEW_CREDENTIAL <ExternalLink size={12} />
+                      </a>
+                    </div>
+                  </motion.div>
+
+                  {/* Cert 4: NVIDIA */}
                   <motion.div
                     whileHover={{ scale: 1.02 }}
                     className="bg-[#131313] border border-[#00ff41]/20 p-6 hover:border-[#00ff41] transition-all duration-300 flex flex-col justify-between group shadow-lg"
@@ -975,7 +1015,7 @@ export default function Home() {
                     </div>
                   </motion.div>
 
-                  {/* Cert 4: Udacity */}
+                  {/* Cert 5: Udacity */}
                   <motion.div
                     whileHover={{ scale: 1.02 }}
                     className="bg-[#131313] border border-[#00ff41]/20 p-6 hover:border-[#00ff41] transition-all duration-300 flex flex-col justify-between group shadow-lg"
